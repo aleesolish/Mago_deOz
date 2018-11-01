@@ -16,12 +16,14 @@ public class RatMove : MonoBehaviour
 
     public Time time;
     private float sec = 0.0f;
+    private PlayerHealth player;
 
     // Use this for initialization
     void Start()
     {
         anim = GetComponent<Animator>();
         moveRight = true;
+        player = FindObjectOfType<PlayerHealth>();
     }
 
     void Update()
@@ -97,6 +99,12 @@ public class RatMove : MonoBehaviour
         moveSpeed = 0;
     }
 
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+        if(other.CompareTag("Player")){
+            player.currentHealth -= .33f;
+        }
+	}
 
 
 }

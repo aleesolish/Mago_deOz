@@ -92,8 +92,9 @@ public class RatMove : MonoBehaviour
     public void Crushed(){
 
         anim.SetBool("Aplastada", true);
-        Destroy(this.gameObject, 1.5f);
+        Destroy(this.gameObject, .8f);
         gameObject.tag = "Neutralized";
+        moveSpeed = 0;
     }
 
 

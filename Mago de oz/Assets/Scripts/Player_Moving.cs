@@ -226,7 +226,7 @@ public class Player_Moving : MonoBehaviour
         }
         if (other.gameObject.tag == "PickUp")
         {
-            count = count + 0.5f;
+            count = count + 2.5f;
             Destroy(other.gameObject);
             Debug.Log(count);
             SetCounter();
@@ -258,7 +258,7 @@ public class Player_Moving : MonoBehaviour
     }
     void SetCounter()
     {
-        PointText.text = "Ruby: " + count.ToString();
+        PointText.text = "$ " + count.ToString();
 
 
     }

@@ -4250,6 +4250,11 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 8e111e683cca774438acbbe5cad87f4c, type: 2}
+    - target: {fileID: 114897113083306812, guid: 68c8c4455cba544eda2b0e852618aad3,
+        type: 2}
+      propertyPath: PointText
+      value: 
+      objectReference: {fileID: 1392187046}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68c8c4455cba544eda2b0e852618aad3, type: 2}
   m_IsPrefabAsset: 0
@@ -5095,6 +5100,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4850439500056786, guid: 31647a013ec4641fc996c4407af129ea,
     type: 2}
   m_PrefabInternal: {fileID: 1443849879}
+--- !u!114 &1392187046 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114068003216909532, guid: d18c5202fb7f3424ba51ec4ca8cf5d82,
+    type: 2}
+  m_PrefabInternal: {fileID: 1625002089}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1396625143
 Prefab:
   m_ObjectHideFlags: 0

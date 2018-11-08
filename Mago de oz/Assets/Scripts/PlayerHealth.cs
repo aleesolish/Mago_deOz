@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     Animator anim;
-    [SerializeField]
-    Slider HealthSlider;
+    public Slider HealthSlider;
 
     public static float maxHealth = 100f;
     public float currentHealth;
@@ -20,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
     public PausedMenu Paused_Menu;
     void Start()
     {
-
+        currentHealth = maxHealth;
         anim = GetComponent<Animator>();
         HealthSlider.value = maxHealth;
         currentHealth = HealthSlider.value;
@@ -67,7 +66,7 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(CapsuleCollider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         RatMove RatAraña = gameObject.GetComponent<RatMove>();
         if (gameObject.tag == "Deadly"){

@@ -226,10 +226,9 @@ public class Player_Moving : MonoBehaviour
         }
         if (other.gameObject.tag == "PickUp")
         {
-            Destroy(other.gameObject);
             count = count + 0.5f;
+            Destroy(other.gameObject);
             Debug.Log(count);
-
             SetCounter();
         }
         if (other.gameObject.tag == "Slow")

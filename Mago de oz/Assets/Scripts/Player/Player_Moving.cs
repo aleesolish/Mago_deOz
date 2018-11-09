@@ -164,7 +164,7 @@ public class Player_Moving : MonoBehaviour
 
         }
 
-        // ATAQUE
+         //ATAQUE
         if (timeBtAttack <= startTimeBtAttack)
         {
             if (Input.GetKeyDown(KeyCode.Z))
@@ -194,7 +194,7 @@ public class Player_Moving : MonoBehaviour
 
 
     // VOLTEAR AL PERSONAJE
-    void Flip()
+        void Flip()
     {
         // Diciendole que apuntamos a la direccion opuesta
         facingRight = !facingRight;

@@ -46,7 +46,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (Engranes != null)
         {
-            HealthSlider.value -= 50;
+            HealthSlider.value -= 5 ;
             currentHealth = HealthSlider.value;
             anim.SetTrigger("Hurt"); // Activa el Trigger en el Animator
             GetComponent<Rigidbody2D>().AddForce(new Vector2(-25, 1200)); //Resetea la velocidad del personaje para que no avance mientras ataca
@@ -55,7 +55,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (FireDamage != null)
         {
-            HealthSlider.value -= 50;
+            HealthSlider.value -= 5;
             currentHealth = HealthSlider.value;
             anim.SetTrigger("Hurt"); // Activa el Trigger en el Animator
             GetComponent<Rigidbody2D>().AddForce(new Vector2(-25, 1200)); //Resetea la velocidad del personaje para que no avance mientras ataca

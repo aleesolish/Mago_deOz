@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public float currentHealth;
     public bool Damage;
     public GameMaster LevelManager;
-    public float TimeAfterHurt = 2;
+    public float TimeAfterHurt = 0.1f;
 
 
     public Player_Moving Player_Moving;
@@ -48,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
         {
             HealthSlider.value -= 5 ;
             currentHealth = HealthSlider.value;
-            anim.SetTrigger("Hurt"); // Activa el Trigger en el Animator
+            HurtTimer(TimeAfterHurt); // Activa el Trigger en el Animator
             GetComponent<Rigidbody2D>().AddForce(new Vector2(-25, 1200)); //Resetea la velocidad del personaje para que no avance mientras ataca
             Hurt();
         }
@@ -57,7 +57,7 @@ public class PlayerHealth : MonoBehaviour
         {
             HealthSlider.value -= 5;
             currentHealth = HealthSlider.value;
-            anim.SetTrigger("Hurt"); // Activa el Trigger en el Animator
+            HurtTimer(TimeAfterHurt); // Activa el Trigger en el Animator
             GetComponent<Rigidbody2D>().AddForce(new Vector2(-25, 1200)); //Resetea la velocidad del personaje para que no avance mientras ataca
             Hurt();
         }
@@ -73,7 +73,7 @@ public class PlayerHealth : MonoBehaviour
 
             HealthSlider.value -= 35f;
             currentHealth = HealthSlider.value;
-            anim.SetTrigger("Hurt"); // Activa el Trigger en el Animator
+            HurtTimer(TimeAfterHurt); // Activa el Trigger en el Animator
             GetComponent<Rigidbody2D>().AddForce(new Vector2(-25, 1200)); //Resetea la velocidad del personaje para que no avance mientras ataca
             Hurt();
 }
@@ -93,14 +93,20 @@ public class PlayerHealth : MonoBehaviour
             Paused_Menu.DeathRestart();
 
         }
-
-       
-
-
-
     }
 
-   
+    public void HurtTimer(float HurtTime)
+    {
+        StartCoroutine(HurtAnim(HurtTime));
+    }
+
+    IEnumerator HurtAnim(float HurtTime)
+    {
+        anim.SetTrigger("Hurt");
+        yield return new WaitForSeconds(HurtTime);
+
+        anim.ResetTrigger("Hurt");
+    }
 
 
 }

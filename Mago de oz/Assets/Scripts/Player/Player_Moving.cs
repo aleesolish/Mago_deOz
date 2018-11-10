@@ -349,7 +349,7 @@ public class Player_Moving : MonoBehaviour
             collider.enabled = false;
             collider.enabled = true;
        
-        anim.SetBool("Hurt", Hurt);      // Comenzar Loop de parpadeo
+            anim.SetTrigger("Hurt");      // Comenzar Loop de parpadeo
         }
 
 
@@ -358,7 +358,7 @@ public class Player_Moving : MonoBehaviour
 
        
         Physics2D.IgnoreLayerCollision(enemyLayer, playerLayer, false);   // Para de parpadear
-       
+        anim.SetTrigger("Hurt");
     }
 
 

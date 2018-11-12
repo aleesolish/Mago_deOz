@@ -62,6 +62,15 @@ public class PlayerHealth : MonoBehaviour
             Hurt();
         }
 
+        if (collision.gameObject.CompareTag("proyecty"))
+        {
+            HealthSlider.value -= .5f;
+            currentHealth = HealthSlider.value;
+            HurtTimer(TimeAfterHurt); // Activa el Trigger en el Animator
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(-25, 1200)); //Resetea la velocidad del personaje para que no avance mientras ataca
+            Hurt();
+        }
+
 
 
     }
@@ -76,7 +85,7 @@ public class PlayerHealth : MonoBehaviour
             HurtTimer(TimeAfterHurt); // Activa el Trigger en el Animator
             GetComponent<Rigidbody2D>().AddForce(new Vector2(-25, 1200)); //Resetea la velocidad del personaje para que no avance mientras ataca
             Hurt();
-}
+            }
 
 
        

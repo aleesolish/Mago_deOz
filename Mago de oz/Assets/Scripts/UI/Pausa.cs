@@ -3,43 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pausa : MonoBehaviour {
-    [SerializeField] 
-    private GameObject panel;
+
+    public static bool GameIsPaused = false;
+    public GameObject pauseMenuUI;
 
 
-	// Use this for initialization
-	void Start () {
-
-        panel.SetActive(false);
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+	 void Update()
+	{
         if (Input.GetKeyDown(KeyCode.Escape)){
-            Debug.Log("presionaste Esc");
-            if (panel.activeInHierarchy == false){
-                PauseGame();
-            }
-
-            if (panel.activeInHierarchy == true)
+            if (GameIsPaused)
             {
-                ContinueGame();
+                Resume();
+            }
+            else{
+                Pause();
             }
         }
-		
 	}
 
-
-    public void PauseGame(){
-        Debug.Log("Pausa");
-        Time.timeScale = 0;
-        panel.SetActive(true);
+    public void Resume(){
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        
     }
 
-    public void ContinueGame(){
-        Time.timeScale = 1;
-        panel.SetActive(false);
+    void Pause (){
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+        
+        
     }
 }
 

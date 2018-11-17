@@ -13,6 +13,7 @@ TagManager:
   - FallDetector
   - proyecty
   - Neutralized
+  - 'Enemy '
   layers:
   - Default
   - TransparentFX

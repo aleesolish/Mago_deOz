@@ -12,6 +12,7 @@ TagManager:
   - PickUp
   - FallDetector
   - proyecty
+  - Neutralized
   layers:
   - Default
   - TransparentFX

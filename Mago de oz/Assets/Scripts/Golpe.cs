@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Golpe : MonoBehaviour {
-    public Slider coraje;
     public GameObject punch;
     private float waitTime = 0.6f;
 
@@ -29,12 +28,4 @@ public class Golpe : MonoBehaviour {
         punch.gameObject.SetActive(false);
 
     }
-
-	private void OnTriggerEnter2D(Collider2D collision)
-	{
-        if (collision.CompareTag("Deadly")){
-            Destroy(collision.gameObject);
-            coraje.value += 3;
-        }
-	}
 }

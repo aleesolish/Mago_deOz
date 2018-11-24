@@ -59,7 +59,6 @@ public class RatMove : MonoBehaviour
         gameObject.transform.localScale = new Vector3(-1 * theScale.x, theScale.y, theScale.z);
     }
 
-
     private void OnCollisionEnter2D(Collision2D col)
     {
         
@@ -102,7 +101,7 @@ public class RatMove : MonoBehaviour
         moveSpeed = 0;
     }
 
-	private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
 	{
         if(other.CompareTag("Player")){
             player.currentHealth -= 5f;

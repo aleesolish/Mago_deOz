@@ -9,24 +9,32 @@ public class trampolineJump : MonoBehaviour {
     GameObject bouncer;
     public Vector2 velocity;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    Animator anim;
+
+    // Use this for initialization
+    void Start()
+    {
+        anim = gameObject.GetComponent<Animator>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
 
-    void OnCollisionStay2D(Collision2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
         if (onTop)
         {
+            anim.SetBool("isStepped", true);
             bouncer = other.gameObject;
+            Debug.Log("pisando");
+
         }
-        bouncer = other.gameObject;
+        else
+            onTop = true;
 
     }
 
@@ -38,10 +46,13 @@ public class trampolineJump : MonoBehaviour {
     void OnTriggerExit2D(Collider2D collision)
     {
         onTop = false;
+        anim.SetBool("isStepped", false);
+
     }
 
     void Jump()
     {
         bouncer.GetComponent<Rigidbody2D>().velocity = velocity;
+
     }
 }

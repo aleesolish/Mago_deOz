@@ -38,10 +38,14 @@ public class RatMove : MonoBehaviour
         sec += Time.deltaTime;
 
         transform.position = new Vector3(transform.position.x + (reverse * moveSpeed) * Time.deltaTime, transform.position.y);
-        if (sec > 5.0f)
+        if (sec > 3.0f)
         {
             Sniff();
             sec = 0;
+            audio.Play();
+        }
+        if(transform.position.x<-160){
+            Destroy(gameObject);
         }
     }
 

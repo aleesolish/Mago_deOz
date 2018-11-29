@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class RatMove : MonoBehaviour
 {
     public float moveSpeed;
@@ -12,6 +13,8 @@ public class RatMove : MonoBehaviour
     public bool colliding;
     Animator anim;
     float reverse = 1.0f;
+    public AudioClip deadRat;
+    public AudioSource audio;
 
     public Rigidbody2D rb;
 
@@ -27,6 +30,7 @@ public class RatMove : MonoBehaviour
         moveRight = true;
         player = FindObjectOfType<PlayerHealth>();
         slider = player.HealthSlider;
+        audio = gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -96,6 +100,8 @@ public class RatMove : MonoBehaviour
     public void Crushed(){
 
         anim.SetBool("Aplastada", true);
+        audio.clip = deadRat;
+        audio.Play();
         Destroy(this.gameObject, .8f);
         gameObject.tag = "Neutralized";
         moveSpeed = 0;

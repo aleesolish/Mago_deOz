@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public bool Damage;
     public GameMaster LevelManager;
     public float TimeAfterHurt = 0.1f;
+    public GameObject inicio;
 
 
     public Player_Moving Player_Moving;
@@ -117,6 +118,14 @@ public class PlayerHealth : MonoBehaviour
         anim.ResetTrigger("Hurt");
     }
 
+	private void Update()
+	{
+        if (currentHealth<= 0 ){
+            gameObject.transform.position = inicio.transform.position;
+            HealthSlider.value = 100f;
+            currentHealth = HealthSlider.value;
+        }
+	}
 
 }
 

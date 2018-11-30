@@ -2619,9 +2619,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 572352005}
-  - component: {fileID: 572352007}
+  - component: {fileID: 572352009}
   - component: {fileID: 572352006}
   - component: {fileID: 572352008}
+  - component: {fileID: 572352007}
   m_Layer: 0
   m_Name: Mono 4
   m_TagString: Deadly
@@ -2652,7 +2653,7 @@ Animator:
   m_GameObject: {fileID: 572352004}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 66a5c5d63d5024a33bec83939857e2ae, type: 2}
+  m_Controller: {fileID: 9100000, guid: 09f4ca6c7ddbe44cf8dabfb34a1ed8c0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2661,7 +2662,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!212 &572352007
+--- !u!114 &572352007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 572352004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e66b75fcd044923b0c134bb397768c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &572352008
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 572352004}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1
+--- !u!212 &572352009
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2707,21 +2734,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &572352008
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 572352004}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.1
 --- !u!1001 &589781097
 Prefab:
   m_ObjectHideFlags: 0
@@ -3211,11 +3223,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4923850719174508, guid: d4afeaa65ece7479792183b9f09ff833, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.6
+      value: -17.6
       objectReference: {fileID: 0}
     - target: {fileID: 4923850719174508, guid: d4afeaa65ece7479792183b9f09ff833, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 19.7
+      value: 8.8
       objectReference: {fileID: 0}
     - target: {fileID: 4923850719174508, guid: d4afeaa65ece7479792183b9f09ff833, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3240,6 +3252,25 @@ Prefab:
     - target: {fileID: 4923850719174508, guid: d4afeaa65ece7479792183b9f09ff833, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 212356478182585956, guid: d4afeaa65ece7479792183b9f09ff833,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300004, guid: 3955d510cf2a7a945b69df227755c6b9,
+        type: 3}
+    - target: {fileID: 4923850719174508, guid: d4afeaa65ece7479792183b9f09ff833, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.264
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923850719174508, guid: d4afeaa65ece7479792183b9f09ff833, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.288
+      objectReference: {fileID: 0}
+    - target: {fileID: 58348993378494964, guid: d4afeaa65ece7479792183b9f09ff833,
+        type: 2}
+      propertyPath: m_Radius
+      value: 6.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4afeaa65ece7479792183b9f09ff833, type: 2}
@@ -7724,9 +7755,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1751278065}
-  - component: {fileID: 1751278067}
+  - component: {fileID: 1751278069}
   - component: {fileID: 1751278066}
   - component: {fileID: 1751278068}
+  - component: {fileID: 1751278067}
   m_Layer: 0
   m_Name: Mono 2
   m_TagString: Deadly
@@ -7757,7 +7789,7 @@ Animator:
   m_GameObject: {fileID: 1751278064}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 580f2b22e375d4311bfeb618c2dbc0b4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 09f4ca6c7ddbe44cf8dabfb34a1ed8c0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -7766,7 +7798,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!212 &1751278067
+--- !u!114 &1751278067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1751278064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e66b75fcd044923b0c134bb397768c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &1751278068
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1751278064}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00000023841858, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1
+--- !u!212 &1751278069
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7812,21 +7870,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1751278068
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1751278064}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.00000023841858, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.1
 --- !u!1 &1767616435
 GameObject:
   m_ObjectHideFlags: 0

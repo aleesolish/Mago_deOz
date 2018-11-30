@@ -81,7 +81,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (collision.gameObject.CompareTag("proyecty"))
         {
-            HealthSlider.value -= .5f;
+            HealthSlider.value -= 5;
             currentHealth = HealthSlider.value;
             //HurtTimer(TimeAfterHurt); // Activa el Trigger en el Animator
             anim.SetBool("isHurt", true);

@@ -14,7 +14,6 @@ TagManager:
   - proyecty
   - Neutralized
   - 'Enemy '
-  - Vida
   layers:
   - Default
   - TransparentFX

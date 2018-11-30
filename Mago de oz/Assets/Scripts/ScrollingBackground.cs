@@ -33,6 +33,6 @@ public class ScrollingBackground : MonoBehaviour
         newPos = Mathf.Repeat(Time.time * -scrollSpeed, scrollOffset);
 
         // Setting new position
-        //transform.position = startPos + Vector2.right * newPos;
+        transform.position = startPos + Vector2.right * newPos;
     }
 }

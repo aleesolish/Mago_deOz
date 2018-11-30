@@ -14,6 +14,7 @@ TextureImporter:
     21300018: Lion_Sprites02_9
     21300020: Lion_Sprites02_10
     21300022: Lion_Sprites02_11
+    21300024: Lion_Sprites02_12
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -375,6 +376,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 98661bb1006cf47049a5ad00c1fc47e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lion_Sprites02_12
+      rect:
+        serializedVersion: 2
+        x: 7024
+        y: 1503
+        width: 1067
+        height: 1512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b4efcb9d13b1349a534e07d08ca2c6
       vertices: []
       indices: 
       edges: []

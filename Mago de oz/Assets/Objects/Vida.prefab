@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4923850719174508}
   - component: {fileID: 212356478182585956}
   - component: {fileID: 58348993378494964}
+  - component: {fileID: 114409429255155210}
   m_Layer: 0
   m_Name: Vida
   m_TagString: Untagged
@@ -56,6 +57,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &114409429255155210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047477467499322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d900404955546edb73dad5415e0be0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 114249028143172996, guid: 68c8c4455cba544eda2b0e852618aad3, type: 2}
+  HealthSlider: {fileID: 0}
 --- !u!212 &212356478182585956
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -91,7 +105,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300002, guid: 3955d510cf2a7a945b69df227755c6b9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

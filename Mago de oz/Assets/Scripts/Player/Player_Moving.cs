@@ -231,6 +231,14 @@ public class Player_Moving : MonoBehaviour
             Debug.Log(count);
             SetCounter();
         }
+        if (other.gameObject.tag == "PickUp2")
+        {
+            count = count + 10f;
+            Destroy(other.gameObject);
+            Debug.Log(count);
+            SetCounter();
+        }
+
         if (other.gameObject.tag == "Slow")
         {
             topSpeed = 7f;

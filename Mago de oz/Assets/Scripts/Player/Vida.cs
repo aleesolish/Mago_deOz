@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Vida : MonoBehaviour {
-    private int value = 5;
+    private int value = 30;
     public PlayerHealth player;
     public Slider HealthSlider;
 

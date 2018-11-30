@@ -15,6 +15,8 @@ TagManager:
   - Neutralized
   - 'Enemy '
   - Vida
+  - PickUp2
+  - Rata
   layers:
   - Default
   - TransparentFX

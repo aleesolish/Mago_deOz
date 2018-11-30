@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 82508425861269812}
   m_Layer: 11
   m_Name: "RatAra\xF1a"
-  m_TagString: Deadly
+  m_TagString: Rata
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

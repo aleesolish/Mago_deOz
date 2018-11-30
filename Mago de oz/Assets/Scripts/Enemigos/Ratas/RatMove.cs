@@ -45,7 +45,7 @@ public class RatMove : MonoBehaviour
             audio.Play();
         }
         if(transform.position.x<-160){
-            Destroy(gameObject);
+            Destroy(gameObject);    
         }
     }
 

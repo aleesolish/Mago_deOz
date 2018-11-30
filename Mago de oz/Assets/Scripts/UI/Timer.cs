@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    private int timeLeft = 100000;
+    private int timeLeft = 5;
     public Text countdownText;
 
     // Use this for initialization
@@ -22,6 +23,8 @@ public class Timer : MonoBehaviour
         {
             StopCoroutine("LoseTime");
             countdownText.text = "Times Up!";
+            SceneManager.LoadScene(Application.loadedLevelName);
+
         }
     }
 

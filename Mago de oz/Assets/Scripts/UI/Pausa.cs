@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pausa : MonoBehaviour {
 
@@ -34,6 +35,11 @@ public class Pausa : MonoBehaviour {
         GameIsPaused = true;
         
         
+    }
+    public void ReturnMainMenu()
+    {
+        SceneManager.LoadScene(0);
+
     }
 }
 

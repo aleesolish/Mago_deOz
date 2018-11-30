@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    private int timeLeft = 5;
+    private int timeLeft = 100;
     public Text countdownText;
 
     // Use this for initialization
